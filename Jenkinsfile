@@ -8,8 +8,8 @@ pipeline {
             }
             steps {
                 
-                echo 'building match engine'
-                cat test1/test1.txt
+                echo 'building match engine'; ls; cd test1; cat test1.txt
+                
             }
         }
         stage('test2') {
