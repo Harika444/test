@@ -1,6 +1,9 @@
 pipeline {
     agent any
     stages {
+        stage ('Workspace Cleanup') {
+          cleanWs()                              
+        }
         stage('test1') {
             when {
                 changeset "**/test1/*.*"
@@ -8,6 +11,7 @@ pipeline {
             steps {
                 
                 echo 'building match engine'
+                cat test1/test1.txt
             }
         }
         stage('test2') {
