@@ -1,9 +1,7 @@
 pipeline {
     agent any
     stages {
-        stage ('Workspace Cleanup') {
-          cleanWs()                              
-        }
+
         stage('test1') {
             when {
                 changeset "**/test1/*.*"
