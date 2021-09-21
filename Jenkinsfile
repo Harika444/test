@@ -7,7 +7,7 @@ pipeline {
                 changeset "**/test1/*.*"
             }
             steps {
-            sh 'ls'
+            sh 'cat test1/test1.txt'
             }
         }
         stage('test2') {
