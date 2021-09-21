@@ -8,7 +8,7 @@ pipeline {
             }
             steps {
                 
-                cat test1/test1.txt
+                ls
                 
             }
         }
